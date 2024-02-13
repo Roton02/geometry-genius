@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry-Genius</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="container mt-8">  
+    <header>
+
+    </header>
+    <main>
+        <div class=" flex flex-col lg:flex-row space-y-4">
+            <div class=" flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 space-x-2 space-y-2">
+              <!-- card 1 -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="p-6">
+                      <img class="w-72 h-36" src="./images/triangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Triangle</h2>
+                      <p>Area = 0.5 X B x H</p>
+                      <div class=" flex space-x-3">
+                        <input id="rectangle-base" class=" w-16 border-2 rounded-md p-1" type="text" placeholder="B">
+                        <p>cm</p>
+                        <input id="rectangle-height" class="w-16 border-2 rounded-md p-1" type="text" placeholder="H">
+                        <p>cm</p>
+                      </div>
+                      <!-- rectanngle-button -->
+                      <div class="card-actions">
+                        <button id="rectangleId" class="btn btn-primary w-[220px] text-2xl">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card-2 -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img class="w-72 h-36" src="./images/parallelogram.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Parallelogram</h2>
+                      <p>Area = B x H</p>
+                      <div class=" flex space-x-3">
+                        <input class=" w-16 border-2 rounded-md p-1" type="text" placeholder="B">
+                        <p>cm</p>
+                        <input class="w-16 border-2 rounded-md p-1" type="text" placeholder="H">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary w-[220px]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- card-3 -->
+                <div class="card  bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img class="w-72 h-36"src="./images/rectangle.png" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Rectangle</h2>
+                      <p>Area = w x l</p>
+                      <div class=" flex space-x-3">
+                        <input class=" w-16 border-2 rounded-md p-1" type="text" placeholder="w">
+                        <p>cm</p>
+                        <input class="w-16 border-2 rounded-md p-1" type="text" placeholder="l">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button class="btn btn-primary w-[220px]">Calculate</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <!-- display-output section -->
+            <div id="" class=" h-96  text-xl  border-2  rounded-lg p-4 border-x-cyan-100 ml-3  ">
+              <h2 class="text-4xl"> <u>Area Calculation</u></h2>  
+              <p style="display: inline;" >Rectangle Area is:</p>
+                <div id="area-display">
+                </div>
+                <button id="refresh" class=" btn btn-primary w-full text-2xl mt-10 "> Refresh</button>            
+            </div>
+        </div>
+    </main>
+    <script src="./all-js/triangle.js"></script>
+</body>
+</html>
